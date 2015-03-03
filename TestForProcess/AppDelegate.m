@@ -7,19 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "AudioController.h"
 
 @interface AppDelegate ()
-
+@property(nonatomic,strong)AudioController *aud;
 @end
 
 @implementation AppDelegate
 
+-(AudioController *)aud
+{
+    if(!_aud){
+        _aud=[[AudioController alloc]init];
+    }
+    return _aud;
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+//    [self.aud spawnAudioProcess];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+    NSLog(@"Was called");
+//    [self.aud killProcess];
+    
 }
 
 @end

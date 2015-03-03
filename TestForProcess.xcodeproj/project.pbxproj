@@ -13,6 +13,7 @@
 		A9ACDC1E1AA5EB8700A9F79A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9ACDC1D1AA5EB8700A9F79A /* Images.xcassets */; };
 		A9ACDC211AA5EB8700A9F79A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9ACDC1F1AA5EB8700A9F79A /* Main.storyboard */; };
 		A9ACDC2D1AA5EB8700A9F79A /* TestForProcessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ACDC2C1AA5EB8700A9F79A /* TestForProcessTests.m */; };
+		A9ACDC381AA5EBE200A9F79A /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9ACDC371AA5EBE200A9F79A /* AudioController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		A9ACDC261AA5EB8700A9F79A /* TestForProcessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestForProcessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9ACDC2B1AA5EB8700A9F79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9ACDC2C1AA5EB8700A9F79A /* TestForProcessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestForProcessTests.m; sourceTree = "<group>"; };
+		A9ACDC361AA5EBE200A9F79A /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		A9ACDC371AA5EBE200A9F79A /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				A9ACDC161AA5EB8700A9F79A /* AppDelegate.m */,
 				A9ACDC1A1AA5EB8700A9F79A /* ViewController.h */,
 				A9ACDC1B1AA5EB8700A9F79A /* ViewController.m */,
+				A9ACDC361AA5EBE200A9F79A /* AudioController.h */,
+				A9ACDC371AA5EBE200A9F79A /* AudioController.m */,
 				A9ACDC1D1AA5EB8700A9F79A /* Images.xcassets */,
 				A9ACDC1F1AA5EB8700A9F79A /* Main.storyboard */,
 				A9ACDC131AA5EB8700A9F79A /* Supporting Files */,
@@ -217,6 +222,7 @@
 			files = (
 				A9ACDC1C1AA5EB8700A9F79A /* ViewController.m in Sources */,
 				A9ACDC191AA5EB8700A9F79A /* main.m in Sources */,
+				A9ACDC381AA5EBE200A9F79A /* AudioController.m in Sources */,
 				A9ACDC171AA5EB8700A9F79A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

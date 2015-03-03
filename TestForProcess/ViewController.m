@@ -7,13 +7,35 @@
 //
 
 #import "ViewController.h"
-
+#import "AudioController.h"
+@interface ViewController()
+@property(nonatomic,strong)AudioController *aud;
+@end
 @implementation ViewController
+
+-(AudioController *)aud
+{
+    if(!_aud){
+        _aud=[[AudioController alloc] init];
+    }
+    return _aud;
+}
+
+- (IBAction)didTapButtonInTheMiddle:(NSButton *)button {
+//    button.state=button.state==NSOnState
+#warning Not implemented
+    if(button.state==NSOnState){
+        
+    }
+    [self.aud spawnAudioProcess];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // insert method call to spawn process here
 
-    // Do any additional setup after loading the view.
 }
 
 - (void)setRepresentedObject:(id)representedObject {
