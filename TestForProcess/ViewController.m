@@ -25,9 +25,17 @@
 //    button.state=button.state==NSOnState
 #warning Not implemented
     if(button.state==NSOnState){
-        
+        dispatch_async(dispatch_queue_create("test_queue", NULL), ^{
+            [self.aud spawnAudioProcess];
+        });
     }
-    [self.aud spawnAudioProcess];
+    else{
+        dispatch_async(dispatch_queue_create("test_queue", NULL), ^{
+            [self.aud killProcess];
+        });
+    }
+    NSLog(@"%tu",button.state);
+//    [self.aud spawnAudioProcess];
 }
 
 

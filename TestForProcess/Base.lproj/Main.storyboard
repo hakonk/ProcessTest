@@ -672,20 +672,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-HI-VeH">
-                                <rect key="frame" x="199" y="118" width="82" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BM7-3E-Adb">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="WrI-bV-FZY">
+                                <rect key="frame" x="208" y="125" width="65" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="4EI-G0-ksp"/>
+                                    <constraint firstAttribute="width" constant="61" id="L30-2E-hmb"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Audio on" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="bCl-dk-Aeb">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="didTapButtonInTheMiddle:" target="XfG-lQ-9wD" id="cWa-ut-U9x"/>
+                                    <action selector="didTapButtonInTheMiddle:" target="XfG-lQ-9wD" id="Kje-vO-9ow"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="AvM-HI-VeH" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="i3G-Qr-hgy"/>
-                            <constraint firstItem="AvM-HI-VeH" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="jI9-aQ-JJv"/>
+                            <constraint firstItem="WrI-bV-FZY" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="L8n-YB-SDD"/>
+                            <constraint firstItem="WrI-bV-FZY" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="125" id="aD4-Uy-zj2"/>
                         </constraints>
                     </view>
                 </viewController>
