@@ -19,13 +19,12 @@
 
 -(void)killProcess
 {
-    int killed= kill(_pid, 0);
+    int killed= kill(_pid, SIGKILL);
     if(killed==0){
         NSLog(@"Successfully killed the process");
-        
     }
     else{
-        NSLog(@"Failed to kill process");
+        NSLog(@"Failed to kill process: %d",_pid);
     }
 }
 

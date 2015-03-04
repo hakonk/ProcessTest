@@ -8,10 +8,23 @@
 
 #import "ViewController.h"
 #import "AudioController.h"
-@interface ViewController()
+@interface ViewController(){
+    
+}
 @property(nonatomic,strong)AudioController *aud;
+@property(nonatomic)dispatch_queue_t audio_queue;
+
 @end
 @implementation ViewController
+
+-(dispatch_queue_t)audio_queue
+{
+    if(!_audio_queue){
+        _audio_queue=dispatch_queue_create("audio_queue", NULL);
+        NSLog(@"Called getter");
+    }
+    return _audio_queue;
+}
 
 -(AudioController *)aud
 {
@@ -23,18 +36,17 @@
 
 - (IBAction)didTapButtonInTheMiddle:(NSButton *)button {
 //    button.state=button.state==NSOnState
-#warning Not implemented
     if(button.state==NSOnState){
-        dispatch_async(dispatch_queue_create("test_queue", NULL), ^{
+        dispatch_async(self.audio_queue, ^{
             [self.aud spawnAudioProcess];
         });
     }
     else{
-        dispatch_async(dispatch_queue_create("test_queue", NULL), ^{
+        dispatch_async(self.audio_queue, ^{
             [self.aud killProcess];
         });
     }
-    NSLog(@"%tu",button.state);
+//    NSLog(@"%tu",button.state);
 //    [self.aud spawnAudioProcess];
 }
 
